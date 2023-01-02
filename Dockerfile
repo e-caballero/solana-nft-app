@@ -8,13 +8,12 @@ RUN mkdir -p /usr/src
 WORKDIR /usr/src
 
 # copy source files
-COPY ./app/* /usr/src/
+COPY ./app /usr/src/
 
 # install dependencies
 RUN npm install
 
 # start app
-WORKDIR /usr/src/app
 RUN npm run build
 EXPOSE 3000
 CMD npm run start
