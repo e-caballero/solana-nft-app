@@ -14,6 +14,6 @@ COPY ./app /usr/src/
 RUN npm install
 
 # start app
-RUN npm run rebuild
+RUN npm run build
 EXPOSE 3000
 CMD npm run start
